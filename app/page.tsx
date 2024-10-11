@@ -51,7 +51,9 @@ export default async function Content({
     <main className={"w-full " + serif.className}>
       <header className="py-4 px-8 flex justify-between">
         <div />
-        <Link href={url as string}>View raw</Link>
+        <Link target="_blank" href={url as string}>
+          View raw
+        </Link>
       </header>
       <div className="py-12 w-full">
         <article className="mx-auto prose prose-neutral dark:prose-invert text-wrap break-words">
@@ -66,11 +68,7 @@ export default async function Content({
             components={{
               pre(props) {
                 const { children, className, node, ...rest } = props;
-                return (
-                  <span >
-                    {children}
-                  </span>
-                );
+                return <span>{children}</span>;
               },
               code(props) {
                 const { children, className, node, ...rest } = props;

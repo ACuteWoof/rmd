@@ -14,9 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`dark:dark ${sans.className} antialiased`}
-      >
+      <body className={`dark:dark ${sans.className} antialiased`}>
         {children}
       </body>
     </html>
