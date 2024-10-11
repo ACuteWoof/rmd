@@ -66,17 +66,17 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  .callout {
-    @apply border-l-blue-900;
-  }
-  .callout-title {
-    @apply text-blue-900;
-  }
-  .dark .callout {
-    @apply border-l-blue-300;
-  }
-  .dark .callout-title {
-    @apply text-blue-300;
-  }
+  /**/
+  /*.callout {*/
+  /*  @apply border-l-blue-900;*/
+  /*}*/
+  /*.callout-title {*/
+  /*  @apply text-blue-900;*/
+  /*}*/
+  /*.dark .callout {*/
+  /*  @apply border-l-blue-300;*/
+  /*}*/
+  /*.dark .callout-title {*/
+  /*  @apply text-blue-300;*/
+  /*}*/
 }
