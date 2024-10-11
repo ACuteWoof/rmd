@@ -16,7 +16,7 @@ If your markdown file contains HTML (like in some Github readmes), you can add `
 
 No HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md)
 
-With HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md**&html=true**](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true)
+With HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true)
 
 ## Me :)
 
