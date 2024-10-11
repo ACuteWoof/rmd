@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { sans } from "./fonts";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Render Markdown",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className={`dark:dark ${sans.className} antialiased`}>
         {children}
       </body>
+      <Analytics />
     </html>
   );
 }
