@@ -78,7 +78,7 @@
   a.exception:hover {
     @apply bg-transparent text-foreground decoration-foreground;
   }
-  details summary::marker {
+  details.menu summary::marker {
     content: "";
   }
 }

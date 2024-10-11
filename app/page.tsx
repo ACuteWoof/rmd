@@ -50,7 +50,7 @@ export default async function Page({ searchParams }: Props) {
                 View raw
               </Button>
             </Link>
-            <details>
+            <details className="menu">
               <summary className="shadow-sm border !border-border rounded-full h-8 w-8 flex flex-col items-center justify-center hover:!bg-accent hover:!text-accent-foreground">
                 <IoMdSettings />
               </summary>
