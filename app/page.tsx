@@ -19,11 +19,13 @@ export async function generateMetadata(
   _parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const url =
-    searchParams.url ??
-    "A markdown reader; does this really need a title";
+    searchParams.url ?? "A markdown reader; does this really need a title";
+
+  const desc = searchParams.url ?? "Renders markdown files passed to the site.";
 
   return {
     title: url?.toString().split("/")[url.toString().split("/").length - 1],
+    description: desc.toString(),
   };
 }
 
@@ -33,7 +35,9 @@ export default async function Content({
   params: { url: string; html: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const url = searchParams.url ?? "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md"
+  const url =
+    searchParams.url ??
+    "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md";
 
   const res = await fetch(url as string);
   const thetext = await res.text();
