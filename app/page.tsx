@@ -7,7 +7,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
 
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
 type Props = {
   params: { url: string; html: string };
@@ -16,7 +16,6 @@ type Props = {
 
 export async function generateMetadata(
   { searchParams }: Props,
-  _parent: ResolvingMetadata,
 ): Promise<Metadata> {
   const url =
     searchParams.url ?? "A markdown reader; does this really need a title";
@@ -42,7 +41,7 @@ export default async function Content({
   const res = await fetch(url as string);
   const thetext = await res.text();
 
-  let rehypePlugins = [remarkGfm, rehypeKatex, rehypeCallouts];
+  const rehypePlugins = [remarkGfm, rehypeKatex, rehypeCallouts];
 
   return (
     <main className={"py-24 w-full px-8 " + serif.className}>
