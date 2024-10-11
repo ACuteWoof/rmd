@@ -36,7 +36,7 @@ If your markdown file contains HTML (like in some Github readmes), you can add `
 
 If HTML is present in a markdown file and HTML embedding is disabled, the HTML in the file will not only not be rendered, but it won't be displayed as text either.
 
-<video controls autoplay src="https://rmd.lewoof.xyz/html.mp4" type="video/mp4"></video>
+![Example HTML rendering on and off](https://rmd.lewoof.xyz/html.mp4)
 
 > [!CAUTION]
 > Enable this at your own risk, since malicious code can be injected to the session through HTML.
