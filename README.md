@@ -18,7 +18,7 @@ No HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.co
 
 With HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md**&html=true**](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true)
 
-## Support me
+## Me :)
 
 This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
 
