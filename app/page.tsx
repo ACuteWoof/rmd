@@ -33,7 +33,7 @@ export default async function Content({
   params: { url: string; html: string };
   searchParams: { [key: string]: string | string[] | undefined };
 }) {
-  const url = searchParams.url ?? ""
+  const url = searchParams.url ?? "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md"
 
   const res = await fetch(url as string);
   const thetext = await res.text();
