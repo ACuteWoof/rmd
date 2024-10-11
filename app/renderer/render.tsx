@@ -25,7 +25,7 @@ export default function Render({
 
   return (
     <ReactMarkdown
-      // @ts-ignore
+      // @ts-expect-error
       rehypePlugins={
         searchParams.html === "true"
           ? [...rehypePlugins, rehypeRaw]
