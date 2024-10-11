@@ -55,7 +55,7 @@ export default async function Content({
           View raw
         </Link>
       </header>
-      <div className="py-12 w-full">
+      <div className="px-8 py-12 w-full">
         <article className="mx-auto prose prose-neutral dark:prose-invert text-wrap break-words">
           <ReactMarkdown
             rehypePlugins={
