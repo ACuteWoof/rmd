@@ -27,12 +27,12 @@ export default function RenderClient({
     <div>
       {loading ? (
         <div className="h-full w-full flex flex-col gap-2">
-	<Skeleton className="w-full h-[40vh] rounded-xl" />
-	<Skeleton className="w-full h-[20px] rounded-full" />
-	<Skeleton className="w-[90%] h-[20px] rounded-full" />
-	<Skeleton className="w-[95%] h-[20px] rounded-full" />
-	<Skeleton className="w-[80%] h-[20px] rounded-full" />
-	</div>
+          <Skeleton className="w-full h-[40vh] rounded-xl" />
+          <Skeleton className="w-full h-[20px] rounded-full" />
+          <Skeleton className="w-[90%] h-[20px] rounded-full" />
+          <Skeleton className="w-[95%] h-[20px] rounded-full" />
+          <Skeleton className="w-[80%] h-[20px] rounded-full" />
+        </div>
       ) : (
         <Render searchParams={searchParams} thetext={thetext} />
       )}

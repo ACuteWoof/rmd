@@ -6,7 +6,7 @@ This site lets you read markdown files directly from the web since web browsers 
 
 You can open the reader for a markdown file by adding its URL as follows:
 
-```https://rmd.lewoof.xyz/?url=<LINK TO YOUR MARKDOWN FILE>```
+`https://rmd.lewoof.xyz/?url=<LINK TO YOUR MARKDOWN FILE>`
 
 If the link to your markdown file needs certain parameters in order to be displayed, [encode the URL](https://www.urlencoder.io/) before pasting it.
 
