@@ -34,7 +34,7 @@ export default async function Page({ searchParams }: Props) {
 
   const nossr: boolean = searchParams.nossr === "true" || !searchParams.url;
   const noheader: boolean = searchParams.noheader === "true";
-  const html: boolean = searchParams.html === "true" || !searchParams.url;
+  const html: boolean = searchParams.html === "true";
 
   const res = await fetch(url as string);
   const thetext = await res.text();
