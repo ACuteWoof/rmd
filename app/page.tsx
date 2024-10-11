@@ -32,7 +32,7 @@ export default async function Page({ searchParams }: Props) {
     searchParams.url ??
     "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md";
 
-  const nossr: boolean = searchParams.nossr === "true";
+  const nossr: boolean = searchParams.nossr === "true" || !searchParams.url;
   const noheader: boolean = searchParams.noheader === "true";
   const html: boolean = searchParams.html === "true";
 
@@ -84,6 +84,22 @@ export default async function Page({ searchParams }: Props) {
                   <li className="popover-link">
                     <Link href="/" className="w-full exception">
                       How to use
+                    </Link>
+                  </li>
+                  <li className="popover-link">
+                    <Link
+                      href={`/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true`}
+                      className="w-full exception"
+                    >
+                      About me
+                    </Link>
+                  </li>
+                  <li className="popover-link">
+                    <Link
+                      href="https://github.com/acutewoof/rmd"
+                      className="w-full exception"
+                    >
+                      Github
                     </Link>
                   </li>
                 </ul>

@@ -90,7 +90,4 @@
   .popover-link {
     @apply exception flex items-center rounded-sm px-2 py-1.5 text-sm outline-none hover:bg-accent hover:text-accent-foreground hover:opacity-50;
   }
-  img {
-    @apply rounded-md;
-  }
 }

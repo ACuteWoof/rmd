@@ -17,13 +17,19 @@ The options listed below can be toggled on and of with the little menu that pops
 
 ### Hiding the header
 
+`noheader`
+
 Add `&noheader=true` to the URL to hide the header. Removing this parameter will show the header.
 
 ### Server side rendering
 
+`nossr`
+
 I use server side rendering to reduce loading times and to be compatible with browsers that don't use JavaScript. However, if you want to turn it off (to convert the markdown file to HTML on your client) in case the file you're opening is constantly updated and our server cache isn't updated quite as often, add `&nossr=true` to the URL.
 
 ### HTML embedding
+
+`html`
 
 If your markdown file contains HTML (like in some Github readmes), you can add `&html=true` to enable HTML rendering.
 
