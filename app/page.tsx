@@ -32,7 +32,7 @@ export default async function Page({ searchParams }: Props) {
     searchParams.url ??
     "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md";
 
-  const nossr: boolean = searchParams.nossr === "true" || !searchParams.url;
+  const nossr: boolean = searchParams.nossr === "true";
   const noheader: boolean = searchParams.noheader === "true";
   const html: boolean = searchParams.html === "true";
 
