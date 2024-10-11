@@ -9,7 +9,7 @@ You can open the reader for a markdown file by adding its URL as follows:
 
 If your markdown file contains HTML (like in some Github readmes), you can add `&html=true` to enable HTML rendering.
 
-> [!NOTE]
+> [!CAUTION]
 > Do this at your own risk, since malicious code can be injected to the session through HTML.
 
 ### Examples
