@@ -16,10 +16,16 @@ export default function Render({
   searchParams: { [key: string]: string | undefined };
   thetext: string;
 }) {
-  const rehypePlugins = [RehypeVideo, remarkGfm, rehypeKatex, rehypeCallouts];
+  const rehypePlugins = [
+    [RehypeVideo, { details: false }],
+    remarkGfm,
+    rehypeKatex,
+    rehypeCallouts,
+  ];
 
   return (
     <ReactMarkdown
+      // @ts-ignore
       rehypePlugins={
         searchParams.html === "true"
           ? [...rehypePlugins, rehypeRaw]
