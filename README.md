@@ -2,6 +2,27 @@
 
 This site lets you read markdown files directly from the web since web browsers apparently don't render markdown.
 
-To read a markdown file, https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md (the file you're reading right now) for example, put the URL of the file with the `url` search param.
+## Usage
 
-For this example, the URL for the reader would be: [`http://localhost:3000/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md`](http://localhost:3000/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md)
+You can open the reader for a markdown file by adding its URL as follows:
+`https://rmd.lewoof.xyz/?url=<LINK TO YOUR MARKDOWN FILE>`
+
+If your markdown file contains HTML (like in some Github readmes), you can add `&html=true` to enable HTML rendering.
+
+> [!NOTE]
+> Do this at your own risk, since malicious code can be injected to the session through HTML.
+
+### Examples
+
+No HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md)
+
+With HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md**&html=true**](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true)
+
+## Support me
+
+This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
+
+- Monero: AvKjLpQzaE8Aj8A4vgRyuUYsX7GdGo8SddcmMiHf1H2L55CGMUxKUmZUovZtWRkw9LuE4Zr6PRzQg9ivMeueGwa38YHx7u
+- Solana: 6BecuGmLuD7JJEbQuV7mNqUNZ3i8WPxNC5zL63oAhRJH
+- Bitcoin: bc1pfa26nutqw2vnwltv6v4jh3ee34nduh9cta3x20kyr7v0ad4z4vhqsr9wrz
+- Buymeacoffee: [acutewoof](https://buymeacoffee.com/acutewoof)
