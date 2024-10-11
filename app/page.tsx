@@ -20,7 +20,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const url =
     searchParams.url ??
-    "Load a file by adding ?url=<your url here> to the address.";
+    "A markdown reader; does this really need a title";
 
   return {
     title: url?.toString().split("/")[url.toString().split("/").length - 1],
