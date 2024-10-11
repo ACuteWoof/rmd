@@ -69,7 +69,7 @@ export default async function Page({ searchParams }: Props) {
                       href={`/?url=${url}&html=${!html ? "true" : "false"}&nossr=${nossr ? "true" : "false"}&noheader=${noheader ? "true" : "false"}`}
                       className="w-full exception"
                     >
-                      {html ? "Disable" : "Enable"} HTML rendering
+                      {html ? "Disable" : "Enable"} embedded HTML rendering
                     </Link>
                   </li>
                   <li className="popover-link">
@@ -77,7 +77,7 @@ export default async function Page({ searchParams }: Props) {
                       href={`/?url=${url}&html=${html ? "true" : "false"}&nossr=${nossr ? "true" : "false"}&noheader=${!noheader ? "true" : "false"}`}
                       className="w-full exception"
                     >
-                      {noheader ? "Show" : "Hide"} Header
+                      {noheader ? "Show" : "Hide"} header
                     </Link>
                   </li>
                   <hr />
