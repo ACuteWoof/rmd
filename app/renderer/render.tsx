@@ -7,6 +7,7 @@ import rehypeCallouts from "rehype-callouts";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
+import Link from "next/link";
 
 export default function Render({
   searchParams,
@@ -27,6 +28,14 @@ export default function Render({
       remarkPlugins={[remarkMath]}
       skipHtml={searchParams.html !== "true"}
       components={{
+        a(props) {
+          const { href, children, className } = props;
+          return (
+            <a href={href as string} className={className} target="_blank">
+              {children}
+            </a>
+          );
+        },
         pre(props) {
           const { children } = props;
           return <span>{children}</span>;
@@ -50,4 +59,3 @@ export default function Render({
     </ReactMarkdown>
   );
 }
-
