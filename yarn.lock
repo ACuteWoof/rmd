@@ -4058,6 +4058,14 @@ rehype-raw@^7.0.0:
     hast-util-raw "^9.0.0"
     vfile "^6.0.0"
 
+rehype-video@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/rehype-video/-/rehype-video-2.3.0.tgz#37954b6a5c9b5f3138dd33f0c53680fe163f9a31"
+  integrity sha512-wBt/TIpSMQf6U2vH9bNij435fCYdIj/Prt0dMqexP0rk+Ix6nT8beQyu3XYXd7qLIOassHAbBBJxfZgwG+zL9A==
+  dependencies:
+    unified "^11.0.0"
+    unist-util-visit "^5.0.0"
+
 remark-gfm@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/remark-gfm/-/remark-gfm-4.0.0.tgz#aea777f0744701aa288b67d28c43565c7e8c35de"

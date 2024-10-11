@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
+import RehypeVideo from "rehype-video";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -15,7 +16,7 @@ export default function Render({
   searchParams: { [key: string]: string | undefined };
   thetext: string;
 }) {
-  const rehypePlugins = [remarkGfm, rehypeKatex, rehypeCallouts];
+  const rehypePlugins = [RehypeVideo, remarkGfm, rehypeKatex, rehypeCallouts];
 
   return (
     <ReactMarkdown
