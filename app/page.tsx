@@ -1,21 +1,14 @@
 "use server";
-import ReactMarkdown from "react-markdown";
 import { serif } from "./fonts";
-import rehypeRaw from "rehype-raw";
-import remarkGfm from "remark-gfm";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import rehypeCallouts from "rehype-callouts";
-
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import type { Metadata } from "next";
 import Link from "next/link";
+import Render from "./renderer/render";
+import RenderClient from "./renderer/renderclient";
 
 type Props = {
-  params: { url: string; html: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+  params: { url: string; html: string; nossr: string };
+  searchParams: { [key: string]: string | undefined };
 };
 
 export async function generateMetadata({
@@ -32,20 +25,15 @@ export async function generateMetadata({
   };
 }
 
-export default async function Content({
-  searchParams,
-}: {
-  params: { url: string; html: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}) {
-  const url =
+export default async function Page({ searchParams }: Props) {
+  const url: string =
     searchParams.url ??
     "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md";
 
+  const nossr: boolean = searchParams.nossr === "true";
+
   const res = await fetch(url as string);
   const thetext = await res.text();
-
-  const rehypePlugins = [remarkGfm, rehypeKatex, rehypeCallouts];
 
   return (
     <main className={"w-full " + serif.className}>
@@ -57,40 +45,11 @@ export default async function Content({
       </header>
       <div className="px-8 py-12 w-full">
         <article className="mx-auto prose prose-neutral dark:prose-invert text-wrap break-words">
-          <ReactMarkdown
-            rehypePlugins={
-              searchParams.html === "true"
-                ? [...rehypePlugins, rehypeRaw]
-                : rehypePlugins
-            }
-            remarkPlugins={[remarkMath]}
-            skipHtml={searchParams.html !== "true"}
-            components={{
-              pre(props) {
-                const { children } = props;
-                return <span>{children}</span>;
-              },
-              code(props) {
-                const { children, className, ...rest } = props;
-                const match = /language-(\w+)/.exec(className || "");
-                return match ? (
-                  <SyntaxHighlighter
-                    PreTag="pre"
-                    language={match[1]}
-                    style={theme}
-                  >
-                    {String(children).replace(/\n$/, "")}
-                  </SyntaxHighlighter>
-                ) : (
-                  <code {...rest} className={className}>
-                    {children}
-                  </code>
-                );
-              },
-            }}
-          >
-            {thetext}
-          </ReactMarkdown>
+          {nossr ? (
+            <RenderClient searchParams={searchParams} url={url}/>
+          ) : (
+            <Render thetext={thetext} searchParams={searchParams} />
+          )}
         </article>
       </div>
     </main>
