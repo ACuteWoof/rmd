@@ -66,17 +66,16 @@
   body {
     @apply bg-background text-foreground;
   }
-  /**/
-  /*.callout {*/
-  /*  @apply border-l-blue-900;*/
-  /*}*/
-  /*.callout-title {*/
-  /*  @apply text-blue-900;*/
-  /*}*/
-  /*.dark .callout {*/
-  /*  @apply border-l-blue-300;*/
-  /*}*/
-  /*.dark .callout-title {*/
-  /*  @apply text-blue-300;*/
-  /*}*/
+  a {
+    @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out underline;
+  }
+  a:hover {
+    @apply bg-foreground text-background decoration-foreground;
+  }
+  a.exception {
+    @apply leading-none underline-offset-2 transition-all duration-150 ease-in-out;
+  }
+  a.exception:hover {
+    @apply bg-transparent text-foreground decoration-foreground;
+  }
 }

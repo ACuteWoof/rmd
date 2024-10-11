@@ -7,16 +7,20 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCallouts from "rehype-callouts";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
+
 import type { Metadata } from "next";
+import Link from "next/link";
 
 type Props = {
   params: { url: string; html: string };
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(
-  { searchParams }: Props,
-): Promise<Metadata> {
+export async function generateMetadata({
+  searchParams,
+}: Props): Promise<Metadata> {
   const url =
     searchParams.url ?? "A markdown reader; does this really need a title";
 
@@ -44,20 +48,53 @@ export default async function Content({
   const rehypePlugins = [remarkGfm, rehypeKatex, rehypeCallouts];
 
   return (
-    <main className={"py-24 w-full px-8 " + serif.className}>
-      <article className="mx-auto prose prose-neutral dark:prose-invert text-wrap break-words">
-        <ReactMarkdown
-          rehypePlugins={
-            searchParams.html === "true"
-              ? [...rehypePlugins, rehypeRaw]
-              : rehypePlugins
-          }
-          remarkPlugins={[remarkMath]}
-          skipHtml={searchParams.html !== "true"}
-        >
-          {thetext}
-        </ReactMarkdown>
-      </article>
+    <main className={"w-full " + serif.className}>
+      <header className="py-4 px-8 flex justify-between">
+        <div />
+        <Link href={url as string}>View raw</Link>
+      </header>
+      <div className="py-12 w-full">
+        <article className="mx-auto prose prose-neutral dark:prose-invert text-wrap break-words">
+          <ReactMarkdown
+            rehypePlugins={
+              searchParams.html === "true"
+                ? [...rehypePlugins, rehypeRaw]
+                : rehypePlugins
+            }
+            remarkPlugins={[remarkMath]}
+            skipHtml={searchParams.html !== "true"}
+            components={{
+              pre(props) {
+                const { children, className, node, ...rest } = props;
+                return (
+                  <span >
+                    {children}
+                  </span>
+                );
+              },
+              code(props) {
+                const { children, className, node, ...rest } = props;
+                const match = /language-(\w+)/.exec(className || "");
+                return match ? (
+                  <SyntaxHighlighter
+                    {...rest}
+                    PreTag="pre"
+                    children={String(children).replace(/\n$/, "")}
+                    language={match[1]}
+                    style={theme}
+                  />
+                ) : (
+                  <code {...rest} className={className}>
+                    {children}
+                  </code>
+                );
+              },
+            }}
+          >
+            {thetext}
+          </ReactMarkdown>
+        </article>
+      </div>
     </main>
   );
 }
