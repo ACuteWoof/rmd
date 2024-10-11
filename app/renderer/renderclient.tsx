@@ -21,7 +21,7 @@ export default function RenderClient({
       setLoading(false);
       setThetext(thetext);
     })();
-  }, [searchParams]);
+  }, [url, searchParams]);
 
   return (
     <div>

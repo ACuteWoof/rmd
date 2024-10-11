@@ -7,7 +7,6 @@ import rehypeCallouts from "rehype-callouts";
 
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark as theme } from "react-syntax-highlighter/dist/esm/styles/prism";
-import Link from "next/link";
 
 export default function Render({
   searchParams,
