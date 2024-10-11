@@ -30,10 +30,6 @@ If your markdown file contains HTML (like in some Github readmes), you can add `
 > [!CAUTION]
 > Do this at your own risk, since malicious code can be injected to the session through HTML.
 
-No HTML rendering: [https://rmd.lewoof.xyz/?url=https://os.lewoof.xyz/woofos-help.md](https://rmd.lewoof.xyz/?url=https://os.lewoof.xyz/woofos-help.md)
-
-With HTML rendering: [https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true)
-
 ## Me :)
 
 This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
