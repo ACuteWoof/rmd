@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Render from "./renderer/render";
 import RenderClient from "./renderer/renderclient";
+import { IoMdSettings } from "react-icons/io";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   params: { url: string; html: string; nossr: string; noheader: string };
@@ -32,6 +34,7 @@ export default async function Page({ searchParams }: Props) {
 
   const nossr: boolean = searchParams.nossr === "true";
   const noheader: boolean = searchParams.noheader === "true";
+  const html: boolean = searchParams.html === "true";
 
   const res = await fetch(url as string);
   const thetext = await res.text();
@@ -41,9 +44,52 @@ export default async function Page({ searchParams }: Props) {
       {!noheader && (
         <header className="py-4 px-8 flex justify-between">
           <div />
-          <Link target="_blank" href={url as string}>
-            View raw
-          </Link>
+          <div className="flex gap-4 items-center">
+            <Link target="_blank" href={url as string} className="exception">
+              <Button size="sm" variant="outline">
+                View raw
+              </Button>
+            </Link>
+            <details>
+              <summary className="border !border-border rounded-full h-8 w-8 flex flex-col items-center justify-center hover:!bg-foreground hover:!text-background">
+                <IoMdSettings />
+              </summary>
+              <div className="popover-content mt-2">
+                <ul className="max-h-[300px] overflow-y-auto overflow-x-hidden flex flex-col gap-1">
+                  <li className="popover-link">
+                    <Link
+                      href={`/?url=${url}&html=${html ? "true" : "false"}&nossr=${!nossr ? "true" : "false"}&noheader=${noheader ? "true" : "false"}`}
+                      className="w-full exception"
+                    >
+                      {nossr ? "Enable" : "Disable"} server side rendering
+                    </Link>
+                  </li>
+                  <li className="popover-link">
+                    <Link
+                      href={`/?url=${url}&html=${!html ? "true" : "false"}&nossr=${nossr ? "true" : "false"}&noheader=${noheader ? "true" : "false"}`}
+                      className="w-full exception"
+                    >
+                      {html ? "Disable" : "Enable"} HTML rendering
+                    </Link>
+                  </li>
+                  <li className="popover-link">
+                    <Link
+                      href={`/?url=${url}&html=${html ? "true" : "false"}&nossr=${nossr ? "true" : "false"}&noheader=${!noheader ? "true" : "false"}`}
+                      className="w-full exception"
+                    >
+                      {noheader ? "Show" : "Hide"} Header
+                    </Link>
+                  </li>
+                  <hr />
+                  <li className="popover-link">
+                    <Link href="/" className="w-full exception">
+                      How to use
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </div>
         </header>
       )}
       <div className="px-8 py-12 w-full">

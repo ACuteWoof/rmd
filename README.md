@@ -7,12 +7,28 @@ This site lets you read markdown files directly from the web since web browsers 
 You can open the reader for a markdown file by adding its URL as follows:
 `https://rmd.lewoof.xyz/?url=<LINK TO YOUR MARKDOWN FILE>`
 
+If the link to your markdown file needs certain parameters in order to be displayed, [encode the URL](https://www.urlencoder.io/) before pasting it.
+
+---
+
+The options listed below can be toggled on and of with the little menu that pops up when you click the gear icon on the top right corner.
+
+![Options menu](https://rmd.lewoof.xyz/options.png)
+
+### Hiding the header
+
+Add `&noheader=true` to the URL to hide the header. Removing this parameter will show the header.
+
+### Server side rendering
+
+I use server side rendering to reduce loading times and to be compatible with browsers that don't use JavaScript. However, if you want to turn it off (to convert the markdown file to HTML on your client) in case the file you're opening is constantly updated and our server cache isn't updated quite as often, add `&nossr=true` to the URL.
+
+### HTML embedding
+
 If your markdown file contains HTML (like in some Github readmes), you can add `&html=true` to enable HTML rendering.
 
 > [!CAUTION]
 > Do this at your own risk, since malicious code can be injected to the session through HTML.
-
-### Examples
 
 No HTML rendering: [https://rmd.lewoof.xyz/?url=https://os.lewoof.xyz/woofos-help.md](https://rmd.lewoof.xyz/?url=https://os.lewoof.xyz/woofos-help.md)
 
