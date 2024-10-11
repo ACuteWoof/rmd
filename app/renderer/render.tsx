@@ -25,7 +25,7 @@ export default function Render({
 
   return (
     <ReactMarkdown
-      // @ts-expect-error
+      // @ts-expect-error the types here aren't synced idfc
       rehypePlugins={
         searchParams.html === "true"
           ? [...rehypePlugins, rehypeRaw]
