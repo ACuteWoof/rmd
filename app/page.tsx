@@ -67,7 +67,7 @@ export default async function Content({
             skipHtml={searchParams.html !== "true"}
             components={{
               pre(props) {
-                const { children, className, node, ...rest } = props;
+                const { children } = props;
                 return <span>{children}</span>;
               },
               code(props) {
