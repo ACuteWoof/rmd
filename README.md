@@ -41,6 +41,11 @@ https://rmd.lewoof.xyz/html.mp4
 > [!CAUTION]
 > Enable this at your own risk, since malicious code can be injected to the session through HTML.
 
+## Project TODO
+
+- [] Save as PDF (identical to what's seen on the screen)
+- [] Compile to LaTeX
+
 ## Me :)
 
 This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
