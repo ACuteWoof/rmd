@@ -50,7 +50,6 @@ https://rmd.lewoof.xyz/html.mp4
 
 This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
 
-- Monero: AvKjLpQzaE8Aj8A4vgRyuUYsX7GdGo8SddcmMiHf1H2L55CGMUxKUmZUovZtWRkw9LuE4Zr6PRzQg9ivMeueGwa38YHx7u
-- Solana: 6BecuGmLuD7JJEbQuV7mNqUNZ3i8WPxNC5zL63oAhRJH
-- Bitcoin: bc1pfa26nutqw2vnwltv6v4jh3ee34nduh9cta3x20kyr7v0ad4z4vhqsr9wrz
+- Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+- Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
 - Buymeacoffee: [acutewoof](https://buymeacoffee.com/acutewoof)
