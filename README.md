@@ -12,7 +12,7 @@ If the link to your markdown file needs certain parameters in order to be displa
 
 ---
 
-The options listed below can be toggled on and of with the little menu that pops up when you click the gear icon on the top right corner.
+The options listed below can be toggled on and off with the little menu that pops up when you click the gear icon on the top right corner.
 
 ![Options menu](https://rmd.lewoof.xyz/options.png)
 
