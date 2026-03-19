@@ -30,7 +30,7 @@ export async function generateMetadata({
 export default async function Page({ searchParams }: Props) {
   const url: string =
     searchParams.url ??
-    "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/main/README.md";
+    "https://raw.githubusercontent.com/ACuteWoof/rmd/refs/heads/master/README.md";
 
   const nossr: boolean = searchParams.nossr === "true";
   const noheader: boolean = searchParams.noheader === "true";
