@@ -47,6 +47,6 @@ If HTML is present in a markdown file and HTML embedding is disabled, the HTML i
 
 This is a simple project but if you found it helpful, you could check out more [about me](https://rmd.lewoof.xyz/?url=https://raw.githubusercontent.com/ACuteWoof/ACuteWoof/refs/heads/main/README.md&html=true), and maybe support me if you see fit. :P
 
-- Solana: JDkK2kpBmPm6YyYnLYNHpw8FhKyZ9AQ2CQTqj6BQxFKY
+- Solana: GHHPYZDDyXmwPLnQPEBgXAD9FzZmDPhCbVRpgqxuEpQ3
 - Bitcoin (native segwit): bc1qh5m8v9xyd8l4yc7d3qfs5a83rqk3eukcjlw6sh
 - Buymeacoffee: [acutewoof](https://buymeacoffee.com/acutewoof)
